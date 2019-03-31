@@ -122,6 +122,9 @@ public class TweetsServicesImp {
 			for (TweetsEntity tweet : lista) {
 				if (tweet.getUser().getIdioma() != null && !tweet.getUser().getIdioma().isEmpty()) {
 					listaIdiomasDestaHashTag.add(new String(tweet.getUser().getIdioma()));
+					
+					//String string = new String("".getBytes("UTF-8");
+					
 				}
 			}
 
