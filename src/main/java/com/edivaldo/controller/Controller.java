@@ -43,19 +43,9 @@ public class Controller {
 		return idiomaResponse != null ? ResponseEntity.ok(idiomaResponse) : ResponseEntity.notFound().build();
 	}
 	
+
 	
 	@CrossOrigin
-	@GetMapping("/hashTagPorIdioma")
-	public ResponseEntity<List<HashTagOdt>> hashTagPorIdioma() {
-		List<HashTagOdt> hashTagPorIdimoPais = TweetsServicesImp.hashTagPorIdimoPais();
-
-		ResponseDefault idiomaResponse = new ResponseDefault();
-		idiomaResponse.setApiVersion("1.0");
-		idiomaResponse.setObj(hashTagPorIdimoPais);
-		return idiomaResponse != null ? ResponseEntity.ok(hashTagPorIdimoPais) : ResponseEntity.notFound().build();
-	}
-	
-/*	@CrossOrigin
 	@GetMapping("/hashTagPorIdioma")
 	public ResponseEntity<ResponseDefault> hashTagPorIdioma() {
 		List<HashTagOdt> hashTagPorIdimoPais = TweetsServicesImp.hashTagPorIdimoPais();
@@ -64,6 +54,6 @@ public class Controller {
 		idiomaResponse.setApiVersion("1.0");
 		idiomaResponse.setObj(hashTagPorIdimoPais);
 		return idiomaResponse != null ? ResponseEntity.ok(idiomaResponse) : ResponseEntity.notFound().build();
-	}*/
+	}
 
 }
